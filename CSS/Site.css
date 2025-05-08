@@ -1,0 +1,185 @@
+    :root {
+      --primary-color: #4ea5f7;
+      --text-color: #333;
+      --light-color: #555;
+      --font-family: 'Helvetica Neue', sans-serif;
+      --heading-size: 3rem;
+      --spacing: 40px;
+      --signature-width: 150px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      overflow-x: hidden;
+      background-color: #fff;
+    }
+
+    .nav-links {
+      padding: 1rem 2rem;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      margin: 0 0.6rem;
+      text-decoration: none;
+      color: var(--text-color);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .nav-item .active {
+      color: var(--primary-color);
+    }
+
+    .brand {
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+
+    .brand span {
+      font-weight: 700;
+    }
+
+    .header-section {
+      background: url(../Images/new.jpg);
+      height: 80vh;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .image-col {
+        height: 80vh;
+        flex: 1;
+        overflow: hidden;
+      }
+      
+      
+      .image-col img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top; /* ensures the top of the image is visible */
+      }
+      
+      
+
+    .content-col {
+      flex: 1 1 50%;
+      max-width: 50%;
+      padding: var(--spacing);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .content-col img {
+      display: block;
+    max-width: 100%;
+    height: auto;
+    }
+    .name-image{
+      width: 604px;
+    }
+    .signature-img{
+      width: 290px;
+    }
+
+    .content-col h1 {
+      font-size: var(--heading-size);
+      font-weight: 100;
+      letter-spacing: 4px;
+    }
+
+    .content-col h1 span {
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .content-col h5 {
+      margin: 1rem 0;
+      color: var(--light-color);
+    }
+
+    .content-col p {
+      color: var(--text-color);
+      font-size: 0.95rem;
+    }
+
+    .signature {
+      width: var(--signature-width);
+      margin: 1rem auto 0;
+    }
+
+    @media (max-width: 768px) {
+      .image-col,
+      .content-col {
+        max-width: 100%;
+        flex: 100%;
+      }
+
+      .image-col {
+        clip-path: none;
+        height: 300px;
+      }
+
+      .image-col img {
+        height: 100%;
+      }
+
+      .content-col {
+        padding: 2rem;
+      }
+    }
+
+    .nav-tabs {
+      border-bottom: none;
+    }
+    .nav-tabs .nav-link {
+      border: none;
+      color: #333;
+      font-size: 18px;
+      position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    /* Bottom border on hover */
+    .nav-tabs .nav-link:hover::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #007bff;
+    }
+    /* Bottom border on active */
+    .nav-tabs .nav-link.active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #007bff;
+    }
+    /* Remove background on active/hover */
+    .nav-tabs .nav-link:hover,
+    .nav-tabs .nav-link.active {
+      background-color: transparent;
+    }
