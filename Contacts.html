@@ -29,7 +29,7 @@
             <!-- Nav links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="">LATEST NEWS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LatestNews.html">LATEST NEWS</a></li>
                     <li class="nav-item"><a class="nav-link" href="Filmography.html">FILMOGRAPHY</a></li>
                     <li class="nav-item"><a class="nav-link" href="Biography.html">BIOGRAPHY</a></li>
                     <li class="nav-item"><a class="nav-link" href="Photos.html">PHOTOS</a></li>
@@ -37,7 +37,7 @@
                     <li class="nav-item"><a class="nav-link" href="Charity.html">CHARITY</a></li>
                     <li class="nav-item"><a class="nav-link" href="Fans.html">FANS</a></li>
                     <li class="nav-item"><a class="nav-link" href="Links.html">LINKS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Contacts.html">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="">CONTACT</a></li>
                 </ul>
             </div>
         </nav>
@@ -51,7 +51,7 @@
         <div class="content-col ">
             <img class="" src="Images/hero-small-logo.png" alt="">
             <div class="inner-heading">
-                Latest News </div>
+                Links</div>
         </div>
     </section>
     <section class="newsletter-section">
@@ -64,55 +64,57 @@
         </div>
     </section>
     <section class="container pt-5">
-        <div class="container blog-container">
-            <div class="card card-default pb-4">
-              <img class="card-image image-default" src="Images/sample.jpg" alt="Dizzy Cover">
-              <div class="card-content content-default content-dizzy">
-                <div class="card-title title-default title-dizzy">ELLA’S NEW SINGLE “DIZZY” IS OUT!</div>
-                <div class="card-date date-default date-dizzy">Jan 09, 2022</div>
-                <br>
-                <br>
-                <a href="#" class="read-more-btn btn-default btn-dizzy">Read More</a>
-              </div>
-            </div>
+        <div class="container blog-container" style="padding-left: 10%; padding-right: 10%;">
+            <div class="entry-content">
+                <div class="h2 text-upper weight800 text-center">Reach Out</div>
+        <p>Please take a moment to write a message to John. It will be sent to the president of John’s Fan Club, and while we cannot guarantee that you’ll receive a personal message, you will receive an automatic reply to the email address you provide below confirming that your message has been received.</p>
+        <p>Note: to get news alerts by email, please <a href="#" target="_blank" data-toggle="modal" data-target="#email-alert">click here</a>.<br>
+        For an autographed photo, follow the instructions on the <a href="https://travolta.com/fans/">“Fans”</a> page. </p>
         
-            <div class="card card-default pb-4">
-              <img class="card-image image-default" src="Images/sample.jpg" alt="Radio Interview">
-              <div class="card-content content-default">
-                <div class="card-title title-default">LISTEN TO JOHN AND ELLA ON SPOKANE’S KZZU-FM!</div>
-                <div class="card-date date-default">Dec 11, 2021</div>
-                <br>
-                <br>
-
-                <a href="#" class="read-more-btn ">Read More</a>
-              </div>
-            </div>
-            <div class="card card-default pb-4">
-                <img class="card-image image-default" src="Images/sample.jpg" alt="Dizzy Cover">
-                <div class="card-content content-default content-dizzy">
-                  <div class="card-title title-default title-dizzy">ELLA’S NEW SINGLE “DIZZY” IS OUT!</div>
-                  <div class="card-date date-default date-dizzy">Jan 09, 2022</div>
-                  <br>
-                  <br>
-                  <a href="#" class="read-more-btn btn-default btn-dizzy">Read More</a>
+        <div class="container py-5">
+            <form id="contactForm" class="bg-white p-4 shadow rounded" style="max-width: 400px; margin: auto;">
+                <div class="mb-3">
+                    <label for="name" class="form-label fw-bold">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name">
                 </div>
-              </div>
-          
-              <div class="card card-default pb-4">
-                <img class="card-image image-default" src="Images/sample.jpg" alt="Radio Interview">
-                <div class="card-content content-default">
-                  <div class="card-title title-default">LISTEN TO JOHN AND ELLA ON SPOKANE’S KZZU-FM!</div>
-                  <div class="card-date date-default">Dec 11, 2021</div>
-                  <br>
-                  <br>
-  
-                  <a href="#" class="read-more-btn ">Read More</a>
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-bold">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your email">
                 </div>
-              </div>
-          </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label fw-bold">Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
+                </div>
+                <div class="mb-3 robot-check-box">
+                    <label class="robot-check-label">
+                        <input type="checkbox" id="humanCheck">
+                        I'm not a robot
+                    </label>
+                    <div class="robot-icon"></div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitButton" disabled>SEND</button>
+            </form>
+        </div>
+                    </div>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const humanCheck = document.getElementById('humanCheck');
+        const submitButton = document.getElementById('submitButton');
+    
+        humanCheck.addEventListener('change', () => {
+            submitButton.disabled = !humanCheck.checked;
+        });
+    
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+            // Add actual form submission logic here
+        });
+    </script>
+    
 </body>
 
 </html>

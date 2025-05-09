@@ -312,3 +312,30 @@
   max-height: 100vh;
   margin: auto;
 }
+
+
+.robot-check-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  width: 320px;
+  background-color: #f9f9f9;
+}
+.robot-check-box input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.robot-check-label {
+  display: flex;
+  align-items: center;
+}
+.robot-icon {
+  width: 50px;
+  height: 50px;
+  background: url('https://www.gstatic.com/recaptcha/api2/logo_48.png') no-repeat center;
+  background-size: contain;
+}
