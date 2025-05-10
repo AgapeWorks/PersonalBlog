@@ -212,6 +212,7 @@
 
   .inner-heading{
     font-size: 110px;
+    font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     text-transform: uppercase;
@@ -338,4 +339,29 @@
   height: 50px;
   background: url('https://www.gstatic.com/recaptcha/api2/logo_48.png') no-repeat center;
   background-size: contain;
+}
+
+
+.image-card {
+    position: relative;
+      overflow: hidden;
+    display: inline-block;
+}
+
+.thumbnail-image {
+    width: 100%;
+    display: block;
+     transition: transform 0.4s ease;
+}
+.image-card:hover .thumbnail-image {
+    transform: scale(1.1); /* Zoom in slightly */
+}
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    pointer-events: none; /* Allows click-through */
 }
