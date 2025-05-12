@@ -2,7 +2,7 @@
       --primary-color: #4ea5f7;
       --text-color: #333;
       --light-color: #555;
-      --font-family: 'Helvetica Neue', sans-serif;
+      --font-family: 'Montserrat', sans-serif;
       --heading-size: 3rem;
       --spacing: 40px;
       --signature-width: 150px;
@@ -14,7 +14,6 @@
       padding: 0;
       font-family: 'Roboto Slab', serif;
     font-size: 14px;
-    color: #515151;
     line-height: 22px;
     }
 
