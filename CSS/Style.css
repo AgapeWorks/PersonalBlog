@@ -126,6 +126,7 @@
   .detail{
     background: url(../Images/newone2.jpg);
     background-position: top right;
+    background-repeat: no-repeat;
   }
 
   /* .grid-container {
@@ -363,4 +364,40 @@
     width: 100px;
     height: 100px;
     pointer-events: none; /* Allows click-through */
+}
+
+.item2 {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.item2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.item2:hover .overlay {
+  opacity: 1;
 }
