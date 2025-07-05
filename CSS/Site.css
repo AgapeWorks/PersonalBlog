@@ -29,149 +29,122 @@
       text-decoration: none;
     }
 
-    nav{
-      padding-left: 7% !important;
-      padding-right: 7% !important;
-    }
+    nav {
+  padding-left: 7% !important;
+  padding-right: 7% !important;
+}
 
-    .navbar-nav > li > a {
-      color: #40392f;
-      text-transform: uppercase;
-      font-family:  var(--font-family);
-      font-size: 0.9rem;
-      padding-left: 11px !important;
-      padding-right: 11px !important;
-      -webkit-transition: all 200ms ease-in-out;
-      -moz-transition: all 200ms ease-in-out;
-      -ms-transition: all 200ms ease-in-out;
-      -o-transition: all 200ms ease-in-out;
-      transition: all 200ms ease-in-out;
+.navbar-nav > li > a {
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  padding: 0.5rem 0.7rem !important;
+  transition: all 200ms ease-in-out;
+  color: var(--text-color) !important;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a.active {
+  color: var(--primary-color) !important;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.brand span {
+  font-weight: 700;
+}
+
+.header-section {
+  background: url('../Images/new.jpg') no-repeat center center/cover;
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-col {
+  flex: 1;
+  overflow: hidden;
+  min-height: 80vh;
+}
+.image-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.content-col {
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding: var(--spacing);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content-col img {
+  max-width: 100%;
+  height: auto;
+}
+.name-image {
+  max-width: 604px;
+  width: 100%;
+}
+.signature-img {
+  max-width: 290px;
+  width: 100%;
+}
+.content-col h1 {
+  font-size: var(--heading-size);
+  font-weight: 100;
+  letter-spacing: 4px;
+}
+.content-col h1 span {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.content-col h5 {
+  margin: 1rem 0;
+  color: var(--light-color);
+}
+.content-col p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+.signature {
+  width: var(--signature-width);
+  margin: 1rem auto 0;
+}
+
+@media (max-width: 768px) {
+  .image-col,
+  .content-col {
+    flex: 100%;
+    max-width: 100%;
   }
 
-    .nav-link {
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: nowrap !important;
-    }
+  .image-col {
+    height: 300px;
+  }
 
-    .nav-link {
-      text-decoration: none;
-      color: var(--text-color) !important;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
+  .content-col {
+    padding: 2rem;
+  }
 
-    .nav-link:hover {
-      color: var(--primary-color) !important;
-    }
+  .content-col h1 {
+    font-size: 1.75rem;
+  }
 
-    .nav-item .active {
-      color: var(--primary-color) !important;
-    }
-
-    .brand {
-      font-size: 1.4rem;
-      font-weight: 300;
-    }
-
-    .brand span {
-      font-weight: 700;
-    }
-
-    .header-section {
-      background: url(../Images/new.jpg);
-      height: 80vh;
-        display: flex;
-        flex-wrap: wrap;
-      }
-      
-      .image-col {
-        height: 80vh;
-        flex: 1;
-        overflow: hidden;
-      }
-      
-      
-      .image-col img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: top; /* ensures the top of the image is visible */
-      }
-      
-      
-
-    .content-col {
-      flex: 1 1 50%;
-      max-width: 50%;
-      padding: var(--spacing);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .content-col img {
-      display: block;
-    max-width: 100%;
-    height: auto;
-    }
-    .name-image{
-      width: 604px;
-    }
-    .signature-img{
-      width: 290px;
-    }
-
-    .content-col h1 {
-      font-size: var(--heading-size);
-      font-weight: 100;
-      letter-spacing: 4px;
-    }
-
-    .content-col h1 span {
-      font-weight: 700;
-      color: var(--primary-color);
-    }
-
-    .content-col h5 {
-      margin: 1rem 0;
-      color: var(--light-color);
-    }
-
-    .content-col p {
-      color: var(--text-color);
-      font-size: 0.95rem;
-    }
-
-    .signature {
-      width: var(--signature-width);
-      margin: 1rem auto 0;
-    }
-
-    @media (max-width: 768px) {
-      .image-col,
-      .content-col {
-        max-width: 100%;
-        flex: 100%;
-      }
-
-      .image-col {
-        clip-path: none;
-        height: 300px;
-      }
-
-      .image-col img {
-        height: 100%;
-      }
-
-      .content-col {
-        padding: 2rem;
-      }
-    }
-
+  .name-image {
+    width: 100%;
+  }
+  .signature-img {
+    width: 80%;
+  }
+}
     .nav-tabs {
       border-bottom: none;
     }
